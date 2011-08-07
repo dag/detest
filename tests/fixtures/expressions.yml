@@ -1,0 +1,27 @@
+normal:
+  lossy:
+    "[1,2,3]": "[1, 2, 3]"
+    "dict( one=1 , two=2 , three=3 )": "dict(one=1, two=2, three=3)"
+    "2==2": "(2 == 2)"
+    "u'€'": "u'\\u20ac'"
+    '"string"': "'string'"
+    "1  # one": "1"
+  lossless:
+    - "5"
+    - "True"
+    - "None"
+    - "(2 == 2)"
+    - "(2 + 2)"
+    - "[1, 2, 3]"
+    - "dict(one=1, two=2, three=3)"
+    - "dict(**{'one': 1, 'two': 2})"
+    - "{'one': 1, 'two': 2}"
+    - "list(1, 2, 3)"
+    - "list(*[1, 2, 3])"
+    - "'one'.upper()"
+
+simple:
+  lossy:
+    "2==2": "2 == 2"
+  lossless:
+    - "2 == 2"

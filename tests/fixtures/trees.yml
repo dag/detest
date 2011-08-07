@@ -1,0 +1,44 @@
+---
+data:
+  one: 1
+  two: 2
+  three: 3
+
+tree: |
+  <dict>
+    'one':
+      • 1
+    'three':
+      • 3
+    'two':
+      • 2
+
+---
+data:
+  - 1
+  - 2
+  - 3
+
+tree: |
+  <list>
+    • 1
+    • 2
+    • 3
+
+---
+data:
+  Hello, World!
+
+tree: |
+  <str>
+    Hello, World!
+
+---
+data:
+  !!python/object:tests.units.List {}
+
+tree: |
+  <tests.units:List>
+    • 1
+    • 2
+    • 3

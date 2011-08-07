@@ -1,0 +1,100 @@
+---
+left: referer
+right: referrer
+
+diffs:
+  TreeDiffer:
+    Differ:
+      - "  <str>"
+      - "-   referer"
+      - "+   referrer"
+      - "?        +"
+    ndiff:
+      - "  <str>"
+      - "-   referer"
+      - "+   referrer"
+      - "?        +"
+    unified_diff:
+      - "--- left"
+      - "+++ right"
+      - "@@ -1,2 +1,2 @@"
+      - " <str>"
+      - "-  referer"
+      - "+  referrer"
+
+  JSONDiffer:
+    Differ:
+      - "- referer"
+      - "+ referrer"
+      - "?      +"
+
+  PrettyDiffer:
+    Differ:
+      - "- referer"
+      - "+ referrer"
+      - "?      +"
+
+---
+left:
+  - 1
+  - 2
+  - 3
+right:
+  - 2
+  - 3
+  - 4
+
+diffs:
+  JSONDiffer:
+    Differ:
+      - "  ["
+      - "-   1, "
+      - "    2, "
+      - "-   3"
+      - "+   3, "
+      - "?    ++"
+      - ""
+      - "+   4"
+      - "  ]"
+
+  PrettyDiffer:
+    ndiff:
+      - "- [1,"
+      - "-  2,"
+      - "-  3]"
+      - "+ [2,"
+      - "+  3,"
+      - "+  4]"
+
+  YAMLDiffer:
+    unified_diff:
+      - "--- left"
+      - "+++ right"
+      - "@@ -1,3 +1,3 @@"
+      - "-- 1"
+      - " - 2"
+      - " - 3"
+      - "+- 4"
+
+  DataDiffer:
+    unified_diff:
+      - "--- left"
+      - "+++ right"
+      - "["
+      - "@@ -0,2 +0,2 @@"
+      - "-1,"
+      - " 2,"
+      - " 3,"
+      - "+4,"
+      - "]"
+
+---
+left: 4
+right: 5
+
+diffs:
+  YAMLDiffer:
+    ndiff:
+
+  DataDiffer:
+    unified_diff:
